@@ -2463,7 +2463,7 @@ static uint32_t MMC_PowerON(MMC_HandleTypeDef *hmmc)
     }
     
     /* SEND CMD1 APP_CMD with MMC_HIGH_VOLTAGE_RANGE(0xC0FF8000) as argument */
-    errorstate = SDMMC_CmdOpCondition(hmmc->Instance, eMMC_HIGH_VOLTAGE_RANGE);
+    errorstate = SDMMC_CmdOpCondition(hmmc->Instance, eMMC_HIGH_VOLTAGE_RANGE & 0x7FFFFFFFU);
     if(errorstate != HAL_MMC_ERROR_NONE)
     {
       return HAL_MMC_ERROR_UNSUPPORTED_FEATURE;
