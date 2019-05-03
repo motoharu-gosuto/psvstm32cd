@@ -7,8 +7,6 @@
 
    #include "stm32f4xx_hal.h"
    
-   void Error_Handler(void);
-
    #define B1_Pin GPIO_PIN_0
    #define B1_GPIO_Port GPIOA
    #define LD4_Pin GPIO_PIN_12

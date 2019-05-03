@@ -528,6 +528,16 @@
               <FileType>5</FileType>
               <FilePath>..\Inc\sys_clk.h</FilePath>
             </File>
+            <File>
+              <FileName>error_handler.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\error_handler.c</FilePath>
+            </File>
+            <File>
+              <FileName>error_handler.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\error_handler.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
