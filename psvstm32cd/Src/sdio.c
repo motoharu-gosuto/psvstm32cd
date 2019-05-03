@@ -4,6 +4,8 @@
 
 #include "stm32f4xx_ll_sdmmc.h"
 
+MMC_HandleTypeDef hmmc;
+
 // SDIO Initialization Function
 HAL_StatusTypeDef MX_SDIO_MMC_Init(void)
 {
