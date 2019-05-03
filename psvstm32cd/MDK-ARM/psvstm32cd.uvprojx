@@ -498,6 +498,16 @@
               <FileType>5</FileType>
               <FilePath>..\Inc\cmd56.h</FilePath>
             </File>
+            <File>
+              <FileName>gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>gpio.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\gpio.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
