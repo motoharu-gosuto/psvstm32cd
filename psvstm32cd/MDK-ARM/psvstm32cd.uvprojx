@@ -468,6 +468,36 @@
               <FileType>5</FileType>
               <FilePath>..\Inc\sdio_hal_ex.h</FilePath>
             </File>
+            <File>
+              <FileName>bigmac.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\bigmac.c</FilePath>
+            </File>
+            <File>
+              <FileName>bigmac.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\bigmac.h</FilePath>
+            </File>
+            <File>
+              <FileName>kirk.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\kirk.c</FilePath>
+            </File>
+            <File>
+              <FileName>kirk.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\kirk.h</FilePath>
+            </File>
+            <File>
+              <FileName>cmd56.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\cmd56.c</FilePath>
+            </File>
+            <File>
+              <FileName>cmd56.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\cmd56.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
