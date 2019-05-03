@@ -518,6 +518,16 @@
               <FileType>5</FileType>
               <FilePath>..\Inc\sdio.h</FilePath>
             </File>
+            <File>
+              <FileName>sys_clk.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\sys_clk.c</FilePath>
+            </File>
+            <File>
+              <FileName>sys_clk.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\sys_clk.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
