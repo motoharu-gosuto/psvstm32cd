@@ -1,0 +1,1 @@
+STM32F4xx_HAL_Driver Drivers can be copied from local Driver repository

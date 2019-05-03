@@ -1,0 +1,1 @@
+CMSIS Drivers can be copied from local Driver repository

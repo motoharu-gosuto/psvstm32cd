@@ -1,0 +1,1 @@
+STM32_USB_Device_Library library can be copied from local library repository
