@@ -3,6 +3,7 @@
 #include <string.h>
 
 #include "stm32f4xx_ll_sdmmc.h"
+#include "error_handler.h"
 
 MMC_HandleTypeDef hmmc;
 
@@ -16,14 +17,16 @@ HAL_StatusTypeDef MX_SDIO_MMC_Init(void)
    hmmc.Init.BusWide = SDIO_BUS_WIDE_1B;
    hmmc.Init.HardwareFlowControl = SDIO_HARDWARE_FLOW_CONTROL_DISABLE;
    hmmc.Init.ClockDiv = 118;
-  
+
    if (HAL_MMC_Init(&hmmc) != HAL_OK)
    {
-    Error_Handler();
+      Error_Handler();
    }
-  
+
    if (HAL_MMC_ConfigWideBusOperation(&hmmc, SDIO_BUS_WIDE_4B) != HAL_OK)
    {
-    Error_Handler();
+      Error_Handler();
    }
+   
+   return HAL_OK;
 }

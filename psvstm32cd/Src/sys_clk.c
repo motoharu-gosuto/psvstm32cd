@@ -1,5 +1,7 @@
 #include "sys_clk.h"
 
+#include "error_handler.h"
+
 // System Clock Configuration
 void SystemClock_Config(void)
 {

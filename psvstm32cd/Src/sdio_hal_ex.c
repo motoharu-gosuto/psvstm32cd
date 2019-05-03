@@ -4,20 +4,20 @@
 
 uint32_t SDMMC_CmdGenCmdWrite(SDIO_TypeDef *SDIOx)
 {
-  SDIO_CmdInitTypeDef  sdmmc_cmdinit;
-  uint32_t errorstate = SDMMC_ERROR_NONE;
-  
-  sdmmc_cmdinit.Argument         = 0;
-  sdmmc_cmdinit.CmdIndex         = SDMMC_CMD_GEN_CMD;
-  sdmmc_cmdinit.Response         = SDIO_RESPONSE_SHORT;
-  sdmmc_cmdinit.WaitForInterrupt = SDIO_WAIT_NO;
-  sdmmc_cmdinit.CPSM             = SDIO_CPSM_ENABLE;
-  SDIO_SendCommand(SDIOx, &sdmmc_cmdinit);
-  
-  // Check for error conditions
-  errorstate = SDMMC_GetCmdResp1(SDIOx, SDMMC_CMD_GEN_CMD, SDIO_CMDTIMEOUT);
+   SDIO_CmdInitTypeDef  sdmmc_cmdinit;
+   uint32_t errorstate = SDMMC_ERROR_NONE;
 
-  return errorstate;
+   sdmmc_cmdinit.Argument         = 0;
+   sdmmc_cmdinit.CmdIndex         = SDMMC_CMD_GEN_CMD;
+   sdmmc_cmdinit.Response         = SDIO_RESPONSE_SHORT;
+   sdmmc_cmdinit.WaitForInterrupt = SDIO_WAIT_NO;
+   sdmmc_cmdinit.CPSM             = SDIO_CPSM_ENABLE;
+   SDIO_SendCommand(SDIOx, &sdmmc_cmdinit);
+
+   // Check for error conditions
+   errorstate = SDMMC_GetCmdResp1(SDIOx, SDMMC_CMD_GEN_CMD, SDIO_CMDTIMEOUT);
+
+   return errorstate;
 }
 
 HAL_StatusTypeDef HAL_MMC_GenCmdWrite(MMC_HandleTypeDef *hmmc, uint8_t *pData, uint32_t Timeout)
@@ -133,21 +133,21 @@ HAL_StatusTypeDef HAL_MMC_GenCmdWrite(MMC_HandleTypeDef *hmmc, uint8_t *pData, u
 
 uint32_t SDMMC_CmdGenCmdRead(SDIO_TypeDef *SDIOx)
 {
-  SDIO_CmdInitTypeDef  sdmmc_cmdinit;
-  uint32_t errorstate = SDMMC_ERROR_NONE;
-  
-  // Set Block Size for Card
-  sdmmc_cmdinit.Argument         = 1;
-  sdmmc_cmdinit.CmdIndex         = SDMMC_CMD_GEN_CMD;
-  sdmmc_cmdinit.Response         = SDIO_RESPONSE_SHORT;
-  sdmmc_cmdinit.WaitForInterrupt = SDIO_WAIT_NO;
-  sdmmc_cmdinit.CPSM             = SDIO_CPSM_ENABLE;
-  SDIO_SendCommand(SDIOx, &sdmmc_cmdinit);
-  
-  // Check for error conditions
-  errorstate = SDMMC_GetCmdResp1(SDIOx, SDMMC_CMD_GEN_CMD, SDIO_CMDTIMEOUT);
+   SDIO_CmdInitTypeDef  sdmmc_cmdinit;
+   uint32_t errorstate = SDMMC_ERROR_NONE;
 
-  return errorstate;
+   // Set Block Size for Card
+   sdmmc_cmdinit.Argument         = 1;
+   sdmmc_cmdinit.CmdIndex         = SDMMC_CMD_GEN_CMD;
+   sdmmc_cmdinit.Response         = SDIO_RESPONSE_SHORT;
+   sdmmc_cmdinit.WaitForInterrupt = SDIO_WAIT_NO;
+   sdmmc_cmdinit.CPSM             = SDIO_CPSM_ENABLE;
+   SDIO_SendCommand(SDIOx, &sdmmc_cmdinit);
+
+   // Check for error conditions
+   errorstate = SDMMC_GetCmdResp1(SDIOx, SDMMC_CMD_GEN_CMD, SDIO_CMDTIMEOUT);
+
+   return errorstate;
 }
 
 HAL_StatusTypeDef HAL_MMC_GenCmdRead(MMC_HandleTypeDef *hmmc, uint8_t *pData, uint32_t Timeout)
