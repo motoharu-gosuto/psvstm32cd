@@ -508,6 +508,16 @@
               <FileType>5</FileType>
               <FilePath>..\Inc\gpio.h</FilePath>
             </File>
+            <File>
+              <FileName>sdio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\sdio.c</FilePath>
+            </File>
+            <File>
+              <FileName>sdio.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\sdio.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

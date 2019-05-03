@@ -179,42 +179,6 @@ void SystemClock_Config(void)
   }
 }
 
-/**
-  * @brief SDIO Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_SDIO_MMC_Init(void)
-{
-
-  /* USER CODE BEGIN SDIO_Init 0 */
-
-  /* USER CODE END SDIO_Init 0 */
-
-  /* USER CODE BEGIN SDIO_Init 1 */
-
-  /* USER CODE END SDIO_Init 1 */
-  hmmc.Instance = SDIO;
-  hmmc.Init.ClockEdge = SDIO_CLOCK_EDGE_RISING;
-  hmmc.Init.ClockBypass = SDIO_CLOCK_BYPASS_DISABLE;
-  hmmc.Init.ClockPowerSave = SDIO_CLOCK_POWER_SAVE_ENABLE;
-  hmmc.Init.BusWide = SDIO_BUS_WIDE_1B;
-  hmmc.Init.HardwareFlowControl = SDIO_HARDWARE_FLOW_CONTROL_DISABLE;
-  hmmc.Init.ClockDiv = 118;
-  if (HAL_MMC_Init(&hmmc) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  if (HAL_MMC_ConfigWideBusOperation(&hmmc, SDIO_BUS_WIDE_4B) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN SDIO_Init 2 */
-
-  /* USER CODE END SDIO_Init 2 */
-
-}
-
 /* USER CODE BEGIN 4 */
 
 /* USER CODE END 4 */
