@@ -7,24 +7,24 @@
 
 int main(void)
 {
-  // reset peripherals, initialize
-  HAL_Init();
+   // reset peripherals, initialize
+   HAL_Init();
 
-  // configure system clock
-  SystemClock_Config();
+   // configure system clock
+   SystemClock_Config();
 
-  // initialize gpio
-  MX_GPIO_Init();
-   
-  // initialize sdio
-  MX_SDIO_MMC_Init();
-   
-  // initialize usb
-  MX_USB_DEVICE_Init();
-   
-  while (1)
-  {
-  }
+   // initialize gpio
+   MX_GPIO_Init();
+
+   // initialize sdio
+   MX_SDIO_MMC_Init();
+
+   // initialize usb
+   MX_USB_DEVICE_Init();
+
+   while (1)
+   {
+   }
 }
 
 // This function is executed in case of error occurrence.
