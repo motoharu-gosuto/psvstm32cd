@@ -390,31 +390,6 @@
           <GroupName>Application/User</GroupName>
           <Files>
             <File>
-              <FileName>main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/main.c</FilePath>
-            </File>
-            <File>
-              <FileName>usb_device.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/usb_device.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbd_conf.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/usbd_conf.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbd_desc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/usbd_desc.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbd_storage_if.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/usbd_storage_if.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32f4xx_it.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/stm32f4xx_it.c</FilePath>
@@ -423,11 +398,6 @@
               <FileName>stm32f4xx_hal_msp.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/stm32f4xx_hal_msp.c</FilePath>
-            </File>
-            <File>
-              <FileName>main.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Inc\main.h</FilePath>
             </File>
             <File>
               <FileName>stm32f4xx_hal_conf.h</FileName>
@@ -440,9 +410,29 @@
               <FilePath>..\Inc\stm32f4xx_it.h</FilePath>
             </File>
             <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Src/main.c</FilePath>
+            </File>
+            <File>
+              <FileName>main.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\main.h</FilePath>
+            </File>
+            <File>
+              <FileName>usb_device.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Src/usb_device.c</FilePath>
+            </File>
+            <File>
               <FileName>usb_device.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\Inc\usb_device.h</FilePath>
+            </File>
+            <File>
+              <FileName>usbd_conf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Src/usbd_conf.c</FilePath>
             </File>
             <File>
               <FileName>usbd_conf.h</FileName>
@@ -450,9 +440,19 @@
               <FilePath>..\Inc\usbd_conf.h</FilePath>
             </File>
             <File>
+              <FileName>usbd_desc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Src/usbd_desc.c</FilePath>
+            </File>
+            <File>
               <FileName>usbd_desc.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\Inc\usbd_desc.h</FilePath>
+            </File>
+            <File>
+              <FileName>usbd_storage_if.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Src/usbd_storage_if.c</FilePath>
             </File>
             <File>
               <FileName>usbd_storage_if.h</FileName>
