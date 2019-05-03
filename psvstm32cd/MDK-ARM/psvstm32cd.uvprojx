@@ -458,6 +458,16 @@
               <FileType>5</FileType>
               <FilePath>..\Inc\usbd_storage_if.h</FilePath>
             </File>
+            <File>
+              <FileName>sdio_hal_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\sdio_hal_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>sdio_hal_ex.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\sdio_hal_ex.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
