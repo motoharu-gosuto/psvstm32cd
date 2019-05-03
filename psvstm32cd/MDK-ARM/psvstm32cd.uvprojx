@@ -386,9 +386,6 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>::CMSIS</GroupName>
-        </Group>
-        <Group>
           <GroupName>Application/User</GroupName>
           <Files>
             <File>
@@ -577,6 +574,119 @@
               <FilePath>../Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc_scsi.c</FilePath>
             </File>
           </Files>
+        </Group>
+        <Group>
+          <GroupName>Middlewares/mbedTLS</GroupName>
+          <Files>
+            <File>
+              <FileName>aes.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Middlewares\Third_Party\mbedTLS\include\mbedtls\aes.h</FilePath>
+            </File>
+            <File>
+              <FileName>check_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Middlewares\Third_Party\mbedTLS\include\mbedtls\check_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>cipher.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Middlewares\Third_Party\mbedTLS\include\mbedtls\cipher.h</FilePath>
+            </File>
+            <File>
+              <FileName>cipher_internal.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Middlewares\Third_Party\mbedTLS\include\mbedtls\cipher_internal.h</FilePath>
+            </File>
+            <File>
+              <FileName>cmac.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Middlewares\Third_Party\mbedTLS\include\mbedtls\cmac.h</FilePath>
+            </File>
+            <File>
+              <FileName>config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Middlewares\Third_Party\mbedTLS\include\mbedtls\config.h</FilePath>
+            </File>
+            <File>
+              <FileName>platform.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Middlewares\Third_Party\mbedTLS\include\mbedtls\platform.h</FilePath>
+            </File>
+            <File>
+              <FileName>platform_time.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Middlewares\Third_Party\mbedTLS\include\mbedtls\platform_time.h</FilePath>
+            </File>
+            <File>
+              <FileName>platform_util.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Middlewares\Third_Party\mbedTLS\include\mbedtls\platform_util.h</FilePath>
+            </File>
+            <File>
+              <FileName>sha1.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Middlewares\Third_Party\mbedTLS\include\mbedtls\sha1.h</FilePath>
+            </File>
+            <File>
+              <FileName>sha256.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Middlewares\Third_Party\mbedTLS\include\mbedtls\sha256.h</FilePath>
+            </File>
+            <File>
+              <FileName>threading.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Middlewares\Third_Party\mbedTLS\include\mbedtls\threading.h</FilePath>
+            </File>
+            <File>
+              <FileName>aes.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\mbedTLS\src\aes.c</FilePath>
+            </File>
+            <File>
+              <FileName>cipher.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\mbedTLS\src\cipher.c</FilePath>
+            </File>
+            <File>
+              <FileName>cipher_wrap.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\mbedTLS\src\cipher_wrap.c</FilePath>
+            </File>
+            <File>
+              <FileName>cmac.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\mbedTLS\src\cmac.c</FilePath>
+            </File>
+            <File>
+              <FileName>platform.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\mbedTLS\src\platform.c</FilePath>
+            </File>
+            <File>
+              <FileName>platform_util.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\mbedTLS\src\platform_util.c</FilePath>
+            </File>
+            <File>
+              <FileName>sha1.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\mbedTLS\src\sha1.c</FilePath>
+            </File>
+            <File>
+              <FileName>sha256.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\mbedTLS\src\sha256.c</FilePath>
+            </File>
+            <File>
+              <FileName>threading.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\mbedTLS\src\threading.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>::CMSIS</GroupName>
         </Group>
       </Groups>
     </Target>
