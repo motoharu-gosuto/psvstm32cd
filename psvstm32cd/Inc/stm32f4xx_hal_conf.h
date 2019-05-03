@@ -72,7 +72,7 @@
 /* #define HAL_RTC_MODULE_ENABLED   */
 /* #define HAL_SAI_MODULE_ENABLED   */
 /* #define HAL_SD_MODULE_ENABLED   */
-#define HAL_MMC_MODULE_ENABLED
+#define HAL_MMC_MODULE_ENABLED //sdio mmc
 /* #define HAL_SPI_MODULE_ENABLED   */
 /* #define HAL_TIM_MODULE_ENABLED   */
 /* #define HAL_UART_MODULE_ENABLED   */
@@ -80,7 +80,7 @@
 /* #define HAL_IRDA_MODULE_ENABLED   */
 /* #define HAL_SMARTCARD_MODULE_ENABLED   */
 /* #define HAL_WWDG_MODULE_ENABLED   */
-#define HAL_PCD_MODULE_ENABLED
+#define HAL_PCD_MODULE_ENABLED // usb otg
 /* #define HAL_HCD_MODULE_ENABLED   */
 /* #define HAL_DSI_MODULE_ENABLED   */
 /* #define HAL_QSPI_MODULE_ENABLED   */
@@ -91,10 +91,10 @@
 /* #define HAL_DFSDM_MODULE_ENABLED   */
 /* #define HAL_LPTIM_MODULE_ENABLED   */
 /* #define HAL_EXTI_MODULE_ENABLED   */
-#define HAL_GPIO_MODULE_ENABLED
-#define HAL_DMA_MODULE_ENABLED
-#define HAL_RCC_MODULE_ENABLED
-#define HAL_FLASH_MODULE_ENABLED
+#define HAL_GPIO_MODULE_ENABLED // gpio
+#define HAL_DMA_MODULE_ENABLED // somehow required for sdio mmc init
+#define HAL_RCC_MODULE_ENABLED // clock initialization
+#define HAL_FLASH_MODULE_ENABLED // somehow required for clock initialization
 #define HAL_PWR_MODULE_ENABLED
 #define HAL_CORTEX_MODULE_ENABLED
 
