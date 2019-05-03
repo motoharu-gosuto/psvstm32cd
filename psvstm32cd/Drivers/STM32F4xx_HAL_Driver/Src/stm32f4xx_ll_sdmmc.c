@@ -197,7 +197,6 @@
 /* Private variables ---------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
 static uint32_t SDMMC_GetCmdError(SDIO_TypeDef *SDIOx);
-static uint32_t SDMMC_GetCmdResp1(SDIO_TypeDef *SDIOx, uint8_t SD_CMD, uint32_t Timeout);
 static uint32_t SDMMC_GetCmdResp2(SDIO_TypeDef *SDIOx);
 static uint32_t SDMMC_GetCmdResp3(SDIO_TypeDef *SDIOx);
 static uint32_t SDMMC_GetCmdResp7(SDIO_TypeDef *SDIOx);
@@ -1173,7 +1172,7 @@ static uint32_t SDMMC_GetCmdError(SDIO_TypeDef *SDIOx)
   * @param  SD_CMD The sent command index  
   * @retval SD Card error state
   */
-static uint32_t SDMMC_GetCmdResp1(SDIO_TypeDef *SDIOx, uint8_t SD_CMD, uint32_t Timeout)
+uint32_t SDMMC_GetCmdResp1(SDIO_TypeDef *SDIOx, uint8_t SD_CMD, uint32_t Timeout)
 {
   uint32_t response_r1;
   
