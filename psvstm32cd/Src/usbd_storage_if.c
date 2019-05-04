@@ -4,6 +4,7 @@
 #define STORAGE_BLK_NBR                  0x10000
 #define STORAGE_BLK_SIZ                  0x200
 
+// USB Mass storage Standard Inquiry Data.
 const int8_t STORAGE_Inquirydata_FS[] = {/* 36 */
   
   /* LUN 0 */
