@@ -72,26 +72,35 @@ HAL_StatusTypeDef MX_SDIO_MMC_Init(void)
    }
    else
    {
-      if (HAL_MMC_ConfigWideBusOperation(&hmmc, SDIO_BUS_WIDE_1B) != HAL_OK) //SDIO_BUS_WIDE_4B
+      // switch to high speed mode
+      if(SDMMC_CmdSwitch(hmmc.Instance, 0x03B90100U) != HAL_MMC_ERROR_NONE)
       {
          Error_Handler();
          return HAL_ERROR;
       }
       else
       {
-         //switch to lower freqency for debug
-         /*
-         hmmc.Init.ClockEdge = SDIO_CLOCK_EDGE_RISING;
-         hmmc.Init.ClockBypass = SDIO_CLOCK_BYPASS_DISABLE;
-         hmmc.Init.ClockPowerSave = SDIO_CLOCK_POWER_SAVE_ENABLE;
-         hmmc.Init.BusWide = SDIO_BUS_WIDE_4B;
-         hmmc.Init.HardwareFlowControl = SDIO_HARDWARE_FLOW_CONTROL_DISABLE;
-         hmmc.Init.ClockDiv = SDIO_INIT_CLK_DIV;
+         if (HAL_MMC_ConfigWideBusOperation(&hmmc, SDIO_BUS_WIDE_4B) != HAL_OK) //SDIO_BUS_WIDE_1B 
+         {
+            Error_Handler();
+            return HAL_ERROR;
+         }
+         else
+         {
+            //switch to lower freqency for debug
+            /*
+            hmmc.Init.ClockEdge = SDIO_CLOCK_EDGE_RISING;
+            hmmc.Init.ClockBypass = SDIO_CLOCK_BYPASS_DISABLE;
+            hmmc.Init.ClockPowerSave = SDIO_CLOCK_POWER_SAVE_ENABLE;
+            hmmc.Init.BusWide = SDIO_BUS_WIDE_4B;
+            hmmc.Init.HardwareFlowControl = SDIO_HARDWARE_FLOW_CONTROL_DISABLE;
+            hmmc.Init.ClockDiv = SDIO_INIT_CLK_DIV;
 
-         SDIO_Init(hmmc.Instance, hmmc.Init);
-         */
-         
-         return HAL_OK;
+            SDIO_Init(hmmc.Instance, hmmc.Init);
+            */
+            
+            return HAL_OK;
+         }
       }
    }
 }
