@@ -88,7 +88,7 @@ HAL_StatusTypeDef MX_SDIO_MMC_Init(void)
          hmmc.Init.HardwareFlowControl = SDIO_HARDWARE_FLOW_CONTROL_DISABLE;
          hmmc.Init.ClockDiv = SDIO_INIT_CLK_DIV;
 
-         SDIO_Init(hsd.Instance, hsd.Init);
+         SDIO_Init(hmmc.Instance, hmmc.Init);
          */
          
          return HAL_OK;
