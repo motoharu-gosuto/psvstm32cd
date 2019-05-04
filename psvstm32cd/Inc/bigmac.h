@@ -1,3 +1,5 @@
+#pragma once
+
 #include <stdint.h>
 
 //this function is an emulation for single case for now, because master keys 0x345 and 0x348 are unknown
