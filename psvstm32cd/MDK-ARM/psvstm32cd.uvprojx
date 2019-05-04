@@ -539,6 +539,11 @@
               <FileType>5</FileType>
               <FilePath>..\Inc\error_handler.h</FilePath>
             </File>
+            <File>
+              <FileName>mbr_types.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\mbr_types.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
