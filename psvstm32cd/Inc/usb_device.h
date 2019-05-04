@@ -10,7 +10,7 @@
    #include "usbd_def.h"
 
    // USB Device initialization function.
-   void MX_USB_DEVICE_Init(void);
+   USBD_StatusTypeDef MX_USB_DEVICE_Init(void);
 
    #ifdef __cplusplus
    }

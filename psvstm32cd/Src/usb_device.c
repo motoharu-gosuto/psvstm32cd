@@ -8,14 +8,20 @@
 USBD_HandleTypeDef hUsbDeviceFS;
 
 // Init USB device Library, add supported class and start the library
-void MX_USB_DEVICE_Init(void)
+USBD_StatusTypeDef MX_USB_DEVICE_Init(void)
 {
-  // Init Device Library, add supported class and start the library.
-  USBD_Init(&hUsbDeviceFS, &FS_Desc, DEVICE_FS);
+   // Init Device Library, add supported class and start the library.
+   if(USBD_Init(&hUsbDeviceFS, &FS_Desc, DEVICE_FS) != USBD_OK)
+      return USBD_FAIL;
+   
+   if(USBD_RegisterClass(&hUsbDeviceFS, &USBD_MSC) != USBD_OK)
+      return USBD_FAIL;
 
-  USBD_RegisterClass(&hUsbDeviceFS, &USBD_MSC);
+   if(USBD_MSC_RegisterStorage(&hUsbDeviceFS, &USBD_Storage_Interface_fops_FS) != 0)
+      return USBD_FAIL;
 
-  USBD_MSC_RegisterStorage(&hUsbDeviceFS, &USBD_Storage_Interface_fops_FS);
+   if(USBD_Start(&hUsbDeviceFS) != USBD_OK)
+      return USBD_FAIL;
 
-  USBD_Start(&hUsbDeviceFS);
+   return USBD_OK;
 }
