@@ -519,11 +519,15 @@ HAL_StatusTypeDef HAL_MMC_ReadBlocks(MMC_HandleTypeDef *hmmc, uint8_t *pData, ui
     /* Initialize data control register */
     hmmc->Instance->DCTRL = 0U;
     
+    // I have no idea why there should be any reason for multiplying block address by 512, this is wrong
+    
     /* Check the Card capacity in term of Logical number of blocks */
+    /*
     if ((hmmc->MmcCard.LogBlockNbr) < CAPACITY)
     {
       BlockAdd *= 512U;
     }
+    */
 
     /* Set Block Size for Card */
     errorstate = SDMMC_CmdBlockLength(hmmc->Instance, BLOCKSIZE);
@@ -708,11 +712,15 @@ HAL_StatusTypeDef HAL_MMC_WriteBlocks(MMC_HandleTypeDef *hmmc, uint8_t *pData, u
     /* Initialize data control register */
     hmmc->Instance->DCTRL = 0U;
     
+    // I have no idea why there should be any reason for multiplying block address by 512, this is wrong
+    
     /* Check the Card capacity in term of Logical number of blocks */
+    /*
     if ((hmmc->MmcCard.LogBlockNbr) < CAPACITY)
     {
       BlockAdd *= 512U;
     }
+    */
     
     /* Set Block Size for Card */ 
     errorstate = SDMMC_CmdBlockLength(hmmc->Instance, BLOCKSIZE);

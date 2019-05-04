@@ -1127,6 +1127,11 @@ uint32_t SDMMC_CmdSwitch(SDIO_TypeDef *SDIOx, uint32_t Argument)
   
   /* Check for error conditions */
   errorstate = SDMMC_GetCmdResp1(SDIOx, SDMMC_CMD_HS_SWITCH, SDIO_CMDTIMEOUT);
+   
+  // card will drive DAT0 low, untill switch command is completed
+  // by some reason SDMMC_CmdSwitch implementation does not wait for DAT0 line
+  // so I am adding delay to mitigate that
+  HAL_Delay(2);
 
   return errorstate;
 }
