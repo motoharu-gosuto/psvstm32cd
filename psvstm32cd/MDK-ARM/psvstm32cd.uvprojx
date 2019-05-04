@@ -544,6 +544,16 @@
               <FileType>5</FileType>
               <FilePath>..\Inc\mbr_types.h</FilePath>
             </File>
+            <File>
+              <FileName>game_card.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\game_card.c</FilePath>
+            </File>
+            <File>
+              <FileName>game_card.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\game_card.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
