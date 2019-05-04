@@ -5,6 +5,8 @@
 #include "mbr_types.h"
 #include "sdio.h"
 
+#define MOUNT_GRO_AS_EXFAT
+
 #define STORAGE_LUN_NBR                  1
 
 // USB Mass storage Standard Inquiry Data.
@@ -80,8 +82,13 @@ int8_t STORAGE_GetCapacity_FS(uint8_t lun, uint32_t *block_num, uint16_t *block_
       }
    }
    
+   #ifdef MOUNT_GRO_AS_EXFAT
    *block_num  = game_card_mbr.partitions[gro_partition_index].partitionSize;
    *block_size = SD_DEFAULT_SECTOR_SIZE;
+   #else
+   *block_num = game_card_mbr.sizeInBlocks;
+   *block_size = SD_DEFAULT_SECTOR_SIZE;
+   #endif
 
    return (USBD_OK);
 }
@@ -98,8 +105,13 @@ int8_t STORAGE_IsWriteProtected_FS(uint8_t lun)
 
 int8_t STORAGE_Read_FS(uint8_t lun, uint8_t *buf, uint32_t blk_addr, uint16_t blk_len)
 {
-   if(HAL_MMC_ReadBlocks(&hmmc, buf, blk_addr, blk_len, 10) != HAL_OK)
+   #ifdef MOUNT_GRO_AS_EXFAT
+   if(HAL_MMC_ReadBlocks(&hmmc, buf, game_card_mbr.partitions[gro_partition_index].partitionOffset + blk_addr, blk_len, 20) != HAL_OK)
       return USBD_FAIL;
+   #else
+   if(HAL_MMC_ReadBlocks(&hmmc, buf, blk_addr, blk_len, 20) != HAL_OK)
+      return USBD_FAIL;
+   #endif
    
    return (USBD_OK);
 }

@@ -6,8 +6,6 @@
 
 #include "game_card.h"
 
-int button_hold_counter = 0;
-
 int main(void)
 {
    // reset peripherals, initialize
@@ -23,7 +21,7 @@ int main(void)
    
    // somehow initialization of card called from STORAGE_Init_FS does not work - hangs forever
    
-   // write to blue pin - indicate loading
+   // write to blue pin - indicate initialization
    HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_15);
    
    MBR mbr;
@@ -44,7 +42,42 @@ int main(void)
    
    // write to blue pin - indicate that initialization is over
    HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_15);
+   
+   HAL_Delay(100);
+   
+   // write to blue pin - indicate initialization
+   HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_15);
+   
+   // initialize usb
+   if(MX_USB_DEVICE_Init() != USBD_OK)
+   {
+      // toggle red pin if MMC initialization has failed
+      HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_14);
+   }
+   else
+   {
+      // toggle twice green pin if everything is ok
+      HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_12);
+      HAL_Delay(500);
+      HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_12);
+      HAL_Delay(500);
+      HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_12);
+      HAL_Delay(500);
+      HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_12);
+      HAL_Delay(500);
+   }
+   
+   // write to blue pin - indicate that initialization is over
+   HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_15);
+   
+   while (1)
+   {
+   }
 
+   // code for debugging
+   /*
+   int button_hold_counter = 0;
+   
    while (1)
    {
       //toggle orange pin (show that device is ready by blinking the led)
@@ -87,4 +120,5 @@ int main(void)
       
       HAL_Delay(100);
    }
+   */
 }
