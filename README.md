@@ -4,7 +4,9 @@ PSVita game card dumper based on STM32F407G Discovery board
 How to setup, compile etc:
 
 Copy 'psvstm32cd\psvstm32cd\Drivers\CMSIS' drivers from your local repo
+
 Copy 'psvstm32cd\psvstm32cd\Drivers\STM32F4xx_HAL_Driver' drivers from your local repo
+
 Copy 'psvstm32cd\psvstm32cd\Middlewares\ST\STM32_USB_Device_Library' library from your local repo
 
 Apply patches to 'psvstm32cd\psvstm32cd\Drivers\STM32F4xx_HAL_Driver'
