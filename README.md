@@ -22,7 +22,7 @@ Make some generated, driver, library files readonly (for your own sake, so that 
 - 'psvstm32cd\psvstm32cd\Inc\stm32f4xx_it.h'
 - 'psvstm32cd\psvstm32cd\Src\stm32f4xx_hal_msp.c'
 - 'psvstm32cd\psvstm32cd\Inc\stm32f4xx_hal_conf.h'
-- N:\psvstm32cd\psvstm32cd\Src\usbd_conf.c
-- N:\psvstm32cd\psvstm32cd\Src\usbd_conf.h
-- N:\psvstm32cd\psvstm32cd\Src\usbd_desc.c
-- N:\psvstm32cd\psvstm32cd\Src\usbd_desc.h
+- 'psvstm32cd\psvstm32cd\Src\usbd_conf.c'
+- 'psvstm32cd\psvstm32cd\Src\usbd_conf.h'
+- 'psvstm32cd\psvstm32cd\Src\usbd_desc.c'
+- 'psvstm32cd\psvstm32cd\Src\usbd_desc.h'
