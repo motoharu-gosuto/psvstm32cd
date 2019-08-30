@@ -692,7 +692,7 @@ HAL_StatusTypeDef MX_SDIO_MMC_CMD56_Init(void)
    if(ReceivePacket8(&packet8_data) != HAL_OK)
       return HAL_ERROR;
    
-   // kirk service 1C will decrypt packet 8 with key_id and master_key
+   // kirk service 1B will decrypt packet 8 with key_id and master_key
    // then it will verify challenge0
    if(KirkSendCommand_1B(key_id, &packet6_data, &packet7_data, &packet8_data) != HAL_OK)
       return HAL_ERROR;
@@ -799,7 +799,7 @@ HAL_StatusTypeDef MX_SDIO_MMC_CMD56_Init(void)
    // then it will decrypt secondary_key1 and tweak_padding from packet 15
    // then it will decrypt secondary_key1 and unknown data from packet 16
    // then it will verify decrypted secondary_key1 from packet 15 against decrypted secondary_key1 from packet 16
-   // then it will verify that decryped tweak_padding from packet 15 is properly tweaked
+   // then it will verify that decrypted tweak_padding from packet 15 is properly tweaked
    // then it will return unknown decrypted data from packet 16
    if(KirkSendCommand_1F(key_id, &packet6_data, &packet9_data.p9, &packet15_data.p1x.p1x, &packet16_data, &packet16_data_aux_part) != HAL_OK)
       return HAL_ERROR;
